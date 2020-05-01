@@ -1,0 +1,50 @@
+[
+  {
+    "customer_id": 1001,
+    "name": "John",
+    "interests": [
+      {
+        "genres": "Action"
+      }
+    ]
+  },
+  {
+    "customer_id": 1002,
+    "name": "Jane",
+    "interests": [
+      {
+        "gender": "Male",
+        "ratings": "8+"
+      }
+    ]
+  },
+  {
+    "customer_id": 1003,
+    "name": "Hans",
+    "interests": [
+      {
+        "gender": "Female",
+        "runtime": "< 110 minutes"
+      }
+    ]
+  },
+  {
+    "customer_id": 1004,
+    "name": "Maria",
+    "interests": [
+      {
+        "actors": "Leonardo DiCaprio"
+      }
+    ]
+  },
+  {
+    "customer_id": 1005,
+    "name": "Julia",
+    "interests": [
+      {
+        "actors": "Morgan Freeman",
+        "genres": "Thriller"
+      }
+    ]
+  }
+]

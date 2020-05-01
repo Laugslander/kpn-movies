@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<movies>
+    <movie>
+        <title>Rambo</title>
+        <genres>
+            <genre>Action</genre>
+            <genre>Thriller</genre>
+        </genres>
+        <actors>
+            <actor>
+                <name>Sylvester Stallone</name>
+                <gender>Male</gender>
+            </actor>
+            <actor>
+                <name>Julie Benz</name>
+                <gender>Female</gender>
+            </actor>
+        </actors>
+        <rating>7.0</rating>
+        <runtime>92</runtime>
+        <imdb>https://www.imdb.com/title/tt0462499</imdb>
+    </movie>
+    <movie>
+        <title>Once Upon a Time... in Hollywood</title>
+        <genres>
+            <genre>Comedy</genre>
+            <genre>Drama</genre>
+        </genres>
+        <actors>
+            <actor>
+                <name>Leonardo DiCaprio</name>
+                <gender>Male</gender>
+            </actor>
+            <actor>
+                <name>Margot Robbie</name>
+                <gender>Female</gender>
+            </actor>
+        </actors>
+        <rating>8.0</rating>
+        <runtime>161</runtime>
+        <imdb>https://www.imdb.com/title/tt7131622</imdb>
+    </movie>
+    <movie>
+        <title>The Shawshank Redemption</title>
+        <genres>
+            <genre>Drama</genre>
+        </genres>
+        <actors>
+            <actor>
+                <name>Tim Robbins</name>
+                <gender>Male</gender>
+            </actor>
+            <actor>
+                <name>Morgan Freeman</name>
+                <gender>Male</gender>
+            </actor>
+        </actors>
+        <rating>9.3</rating>
+        <runtime>142</runtime>
+        <imdb>https://www.imdb.com/title/tt0111161</imdb>
+    </movie>
+</movies>		
