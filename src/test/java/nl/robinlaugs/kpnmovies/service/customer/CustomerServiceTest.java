@@ -1,9 +1,7 @@
-package nl.robinlaugs.kpnmovies.service;
+package nl.robinlaugs.kpnmovies.service.customer;
 
 import nl.robinlaugs.kpnmovies.data.CustomerRepository;
 import nl.robinlaugs.kpnmovies.domain.Customer;
-import nl.robinlaugs.kpnmovies.service.customer.CustomerNotFoundException;
-import nl.robinlaugs.kpnmovies.service.customer.CustomerService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

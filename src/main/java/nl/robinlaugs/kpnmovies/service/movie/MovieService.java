@@ -27,7 +27,7 @@ public class MovieService {
         };
     }
 
-    public List<Movie> findByRatings(String value) {
+    List<Movie> findByRatings(String value) {
         String operatorValue = value.substring(value.length() - 1);
 
         RatingOperator operator = RatingOperator.findByValue(operatorValue);
@@ -37,7 +37,7 @@ public class MovieService {
         return operator.movieFinder.apply(movieRepository, rating);
     }
 
-    public List<Movie> findByRuntime(String value) {
+    List<Movie> findByRuntime(String value) {
         String[] valueAttributes = value.split(" ");
         String operatorValue = valueAttributes[0];
 
@@ -48,17 +48,17 @@ public class MovieService {
         return operator.movieFinder.apply(movieRepository, runtime);
     }
 
-    public List<Movie> findByGenres(String value) {
+    List<Movie> findByGenres(String value) {
         Genre genre = Genre.findByValue(value);
 
         return movieRepository.findByGenresContaining(genre);
     }
 
-    public List<Movie> findByActorNames(String value) {
+    List<Movie> findByActorNames(String value) {
         return movieRepository.findByActorsName(value);
     }
 
-    public List<Movie> findByActorGender(String value) {
+    List<Movie> findByActorGender(String value) {
         Gender gender = Gender.findByValue(value);
 
         return movieRepository.findByActorsGender(gender);

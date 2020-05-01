@@ -1,7 +1,6 @@
-package nl.robinlaugs.kpnmovies.service;
+package nl.robinlaugs.kpnmovies.service.movie;
 
 import nl.robinlaugs.kpnmovies.data.MovieRepository;
-import nl.robinlaugs.kpnmovies.service.movie.MovieService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
