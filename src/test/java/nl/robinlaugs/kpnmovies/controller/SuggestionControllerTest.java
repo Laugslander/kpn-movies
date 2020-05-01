@@ -22,11 +22,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(SuggestionController.class)
 class SuggestionControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
     @MockBean
     private SuggestionService service;
+
+    @Autowired
+    private MockMvc mockMvc;
 
     private static final String GET_SUGGESTIONS_ENDPOINT_URL = "/api/kpnmovies/v1/movie/suggestion/customer/id/";
 
@@ -41,7 +41,7 @@ class SuggestionControllerTest {
         List<MovieResponse> response = List.of(new MovieResponse(movie));
         String json = new ObjectMapper().writeValueAsString(response);
 
-        this.mockMvc.perform(get(GET_SUGGESTIONS_ENDPOINT_URL + "1"))
+        mockMvc.perform(get(GET_SUGGESTIONS_ENDPOINT_URL + "1"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(APPLICATION_JSON))
                 .andExpect(content().json(json));
@@ -53,7 +53,7 @@ class SuggestionControllerTest {
     public void getSuggestionRequest_unknownCustomerId_returnsStatusNotFound() throws Exception {
         when(service.getSuggestions("0")).thenThrow(CustomerNotFoundException.class);
 
-        this.mockMvc.perform(get(GET_SUGGESTIONS_ENDPOINT_URL + "0"))
+        mockMvc.perform(get(GET_SUGGESTIONS_ENDPOINT_URL + "0"))
                 .andExpect(status().isNotFound());
 
         verify(service).getSuggestions("0");
