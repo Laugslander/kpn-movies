@@ -31,14 +31,14 @@ class CustomerServiceTest {
 
         Mockito.when(repository.findById("1")).thenReturn(Optional.of(customer));
 
-        Assertions.assertEquals(customer, service.getCustomer("1"));
+        Assertions.assertEquals(customer, service.findById("1"));
     }
 
     @Test
     public void getCustomer_unknownId_throwsCustomerNotFoundException() {
         Mockito.when(repository.findById("1")).thenReturn(Optional.empty());
 
-        Assertions.assertThrows(CustomerNotFoundException.class, () -> service.getCustomer("1"));
+        Assertions.assertThrows(CustomerNotFoundException.class, () -> service.findById("1"));
     }
 
 }

@@ -20,7 +20,7 @@ public class SuggestionService {
     private final MovieService movieService;
 
     public List<Movie> getSuggestions(String customerId) throws CustomerNotFoundException {
-        Customer customer = customerService.getCustomer(customerId);
+        Customer customer = customerService.findById(customerId);
 
         return customer.getInterests().entrySet().stream()
                 .map(entry -> movieService.findByInterest(entry.getKey(), entry.getValue()))

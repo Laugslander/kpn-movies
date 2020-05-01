@@ -11,7 +11,7 @@ public class CustomerService {
 
     private final CustomerRepository customerRepository;
 
-    public Customer getCustomer(String id) throws CustomerNotFoundException {
+    public Customer findById(String id) throws CustomerNotFoundException {
         return customerRepository.findById(id)
                 .orElseThrow(() -> new CustomerNotFoundException(String.format("Customer with id %s was not found", id)));
     }
