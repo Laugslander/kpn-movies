@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import nl.robinlaugs.kpnmovies.model.InterestCategory;
 
 @RequiredArgsConstructor
-public enum MovieKey {
+public enum MongoMovieKey {
 
     RATINGS("rating"),
     RUNTIME("runtime"),
@@ -16,8 +16,8 @@ public enum MovieKey {
     @Getter
     private final String key;
 
-    public static MovieKey from(InterestCategory interestCategory) {
-        return MovieKey.valueOf(interestCategory.toString());
+    public static MongoMovieKey from(InterestCategory interestCategory) {
+        return MongoMovieKey.valueOf(interestCategory.toString());
     }
 
 }

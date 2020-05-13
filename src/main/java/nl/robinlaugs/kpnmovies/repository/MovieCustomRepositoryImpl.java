@@ -3,7 +3,7 @@ package nl.robinlaugs.kpnmovies.repository;
 import lombok.RequiredArgsConstructor;
 import nl.robinlaugs.kpnmovies.model.Interest;
 import nl.robinlaugs.kpnmovies.model.Movie;
-import nl.robinlaugs.kpnmovies.repository.util.MovieKey;
+import nl.robinlaugs.kpnmovies.repository.util.MongoMovieKey;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -37,7 +37,7 @@ public class MovieCustomRepositoryImpl implements MovieCustomRepository {
     }
 
     private Criteria createCriteria(Interest<?> interest) {
-        String key = MovieKey.from(interest.getCategory()).getKey();
+        String key = MongoMovieKey.from(interest.getCategory()).getKey();
         Object value = interest.getValue();
 
         return switch (interest.getOperator()) {
