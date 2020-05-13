@@ -1,22 +1,23 @@
-package nl.robinlaugs.kpnmovies.service.movie;
+package nl.robinlaugs.kpnmovies.batch.processor.util;
 
 import lombok.RequiredArgsConstructor;
 
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.function.Function;
 
-@RequiredArgsConstructor
-public enum TimeIndicator {
+import static java.util.Arrays.stream;
 
-    HOURS(TimeIndicator::convertHoursToMinutes),
-    MINUTES(TimeIndicator::convertMinutesToMinutes);
+@RequiredArgsConstructor
+public enum TimeConverter {
+
+    HOURS(TimeConverter::convertHoursToMinutes),
+    MINUTES(TimeConverter::convertMinutesToMinutes);
 
     public final Function<String, Duration> durationConverter;
 
-    public static TimeIndicator findByValue(String value) {
-        return Arrays.stream(TimeIndicator.values())
-                .filter(runtimeOperator -> runtimeOperator.toString().equalsIgnoreCase(value))
+    public static TimeConverter findByValue(String value) {
+        return stream(TimeConverter.values())
+                .filter(operator -> operator.name().equalsIgnoreCase(value))
                 .findFirst().orElseThrow(IllegalArgumentException::new);
     }
 

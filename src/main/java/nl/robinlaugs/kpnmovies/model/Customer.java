@@ -1,11 +1,11 @@
-package nl.robinlaugs.kpnmovies.domain;
+package nl.robinlaugs.kpnmovies.model;
 
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Map;
+import java.util.List;
 
 @Data
 @Builder
@@ -16,6 +16,6 @@ public class Customer {
     private String id;
 
     private String name;
-    private Map<Interest, String> interests;
+    private List<Interest<?>> interests;
 
 }

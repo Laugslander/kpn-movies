@@ -1,6 +1,6 @@
-package nl.robinlaugs.kpnmovies.domain;
+package nl.robinlaugs.kpnmovies.model;
 
-import java.util.Arrays;
+import static java.util.Arrays.stream;
 
 public enum Genre {
 
@@ -10,8 +10,8 @@ public enum Genre {
     DRAMA;
 
     public static Genre findByValue(String value) {
-        return Arrays.stream(Genre.values())
-                .filter(genre -> genre.toString().equalsIgnoreCase(value))
+        return stream(values())
+                .filter(genre -> genre.name().equalsIgnoreCase(value))
                 .findFirst().orElseThrow(IllegalArgumentException::new);
     }
 

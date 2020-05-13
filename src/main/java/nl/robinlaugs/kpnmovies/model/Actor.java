@@ -1,4 +1,4 @@
-package nl.robinlaugs.kpnmovies.domain;
+package nl.robinlaugs.kpnmovies.model;
 
 import lombok.Builder;
 import lombok.Data;

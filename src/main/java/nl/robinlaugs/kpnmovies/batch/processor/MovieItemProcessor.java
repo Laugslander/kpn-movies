@@ -2,10 +2,10 @@ package nl.robinlaugs.kpnmovies.batch.processor;
 
 import nl.robinlaugs.kpnmovies.batch.dto.ActorDto;
 import nl.robinlaugs.kpnmovies.batch.dto.MovieDto;
-import nl.robinlaugs.kpnmovies.domain.Actor;
-import nl.robinlaugs.kpnmovies.domain.Gender;
-import nl.robinlaugs.kpnmovies.domain.Genre;
-import nl.robinlaugs.kpnmovies.domain.Movie;
+import nl.robinlaugs.kpnmovies.model.Actor;
+import nl.robinlaugs.kpnmovies.model.Gender;
+import nl.robinlaugs.kpnmovies.model.Genre;
+import nl.robinlaugs.kpnmovies.model.Movie;
 import org.springframework.batch.item.ItemProcessor;
 
 import java.time.Duration;
