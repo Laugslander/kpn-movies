@@ -11,8 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import static org.springframework.data.mongodb.core.query.Criteria.where;
-
 @Repository
 @RequiredArgsConstructor
 public class MovieCustomRepositoryImpl implements MovieCustomRepository {
@@ -41,11 +39,11 @@ public class MovieCustomRepositoryImpl implements MovieCustomRepository {
         Object value = interest.getValue();
 
         return switch (interest.getOperator()) {
-            case NONE -> where(key).is(value);
-            case GREATER_THEN -> where(key).gt(value);
-            case GREATER_THEN_OR_EQUAL_TO -> where(key).gte(value);
-            case LESS_THEN -> where(key).lt(value);
-            case LESS_THEN_OR_EQUAL_TO -> where(key).lte(value);
+            case NONE -> Criteria.where(key).is(value);
+            case GREATER_THEN -> Criteria.where(key).gt(value);
+            case GREATER_THEN_OR_EQUAL_TO -> Criteria.where(key).gte(value);
+            case LESS_THEN -> Criteria.where(key).lt(value);
+            case LESS_THEN_OR_EQUAL_TO -> Criteria.where(key).lte(value);
         };
     }
 

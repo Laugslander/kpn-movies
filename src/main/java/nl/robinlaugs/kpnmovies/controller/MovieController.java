@@ -14,7 +14,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 @RestController
-@RequestMapping("/api/kpnmovies/v1/movie")
+@RequestMapping("/v1/movie")
 @RequiredArgsConstructor
 public class MovieController {
 
