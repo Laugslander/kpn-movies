@@ -17,7 +17,7 @@
     <properties>
         <java.version>14</java.version>
         <lombok.version>1.18.12</lombok.version>
-        <xstream.version>1.4.10-java7</xstream.version>
+        <xstream.version>1.4.13-java7</xstream.version>
     </properties>
 
     <dependencies>
